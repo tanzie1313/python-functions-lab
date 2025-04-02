@@ -120,8 +120,89 @@ print('Exercise 5:', sum_to(6))
 
 
 
-print('Exercise 6:', largest(1, 2, 3))
 
+def largest(a, b, c):
+    return max(a, b, c) #max fucntion returns the largest of the three numbers
+
+print('Exercise 6:', largest(1, 2, 3))      
+
+# Exercise 7: Calculate a Tip
+#
+# Create a function called `calculate_tip`. It should take the bill amount and the tip percentage (as a whole number).
+# The function should return the amount of the tip.
+#
+# Examples:
+# calculate_tip(50, 20) should return 10.
+#
+# Write your function and test its output below.
+
+
+
+
+def calculate_tip(bill_amount, tip_percentage):
+    return bill_amount * (tip_percentage / 100)
+
+
+print('Exercise 7:', calculate_tip(50, 20))  # Expected output: 10.0
+
+# Exercise 8: Calculate Product of Numbers
+#
+# Write a function named `product` that takes an arbitrary number of numbers, multiplies them, and returns the product.
+# Review your notes on *args for handling an arbitrary number of arguments.
+#
+# Examples:
+# product(-1, 4) should return -4.
+# product(2, 5, 5) should return 50.
+#
+# Define the function and call it with different sets of numbers to test.
+
+
+
+
+def product(*args):
+    result = 1   # Initialize result to 1 for multiplication
+    for num in args: # Iterate through all arguments  (1*2*5*5)  
+        result *= num # Multiply each number to the result
+    return result
+
+
+print('Exercise 8:', product(2, 5, 5))  # Expected output: 50
+
+# Exercise 9: Basic Calculator
+#
+# Create a function named `basic_calculator` that takes three arguments: 
+# two numbers and a string representing an operation ('add', 'subtract', 'multiply', 'divide'). 
+# Perform the provided operation on the two numbers. In operations where the order of numbers is important, 
+# treat the first parameter as the first operand and the second parameter as the second operand.
+#
+# Examples:
+# basic_calculator(10, 5, 'subtract') should return 5.
+# basic_calculator(10, 5, 'add') should return 15.
+# basic_calculator(10, 5, 'multiply') should return 50.
+# basic_calculator(10, 5, 'divide') should return 2.
+#
+# Define the function and then call it below.
+
+
+
+
+
+def basic_calculator(num1, num2, operation):
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Cannot divide by zero"
+    else:
+        return "Invalid operation"
+# Test the function with different operations
+print('Exercise 9:', basic_calculator(10, 5, 'add'))        # Expected output: 15
 
 
 
