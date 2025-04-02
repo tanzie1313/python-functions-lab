@@ -11,8 +11,6 @@
 
 def calculate_area_triangle(base, height):
     return (base * height) / 2
-
-# Call the function and print the result
 print('Exercise 1:', calculate_area_triangle(10, 5))
 
 
@@ -30,8 +28,6 @@ print('Exercise 1:', calculate_area_triangle(10, 5))
 def simple_interest(principal, rate, time):
  
     return (principal * rate * time) / 100
-
-# Call the function and print the result
 print('Exercise 2:', simple_interest(1000, 5, 2))
 
 # Exercise 3: Apply a Discount
@@ -87,7 +83,7 @@ def convert_temperature(temperature, unit):
     else:
         raise ValueError("Unit must be 'C' or 'F'")
 
-# print('Exercise 4:', convert_temperature(0, 'C'))
+
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
 print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
 
@@ -106,7 +102,6 @@ print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
 
 def sum_to(n):
     return n * (n + 1) // 2
-# Call the function and print the result
 print('Exercise 5:', sum_to(6))  
 # Exercise 6: Find the Largest Number
 #
@@ -142,7 +137,6 @@ print('Exercise 6:', largest(1, 2, 3))
 def calculate_tip(bill_amount, tip_percentage):
     return bill_amount * (tip_percentage / 100)
 
-
 print('Exercise 7:', calculate_tip(50, 20))  # Expected output: 10.0
 
 # Exercise 8: Calculate Product of Numbers
@@ -164,7 +158,6 @@ def product(*args):
     for num in args: # Iterate through all arguments  (1*2*5*5)  
         result *= num # Multiply each number to the result
     return result
-
 
 print('Exercise 8:', product(2, 5, 5))  # Expected output: 50
 
@@ -201,7 +194,7 @@ def basic_calculator(num1, num2, operation):
             return "Cannot divide by zero"
     else:
         return "Invalid operation"
-# Test the function with different operations
+
 print('Exercise 9:', basic_calculator(10, 5, 'add'))        # Expected output: 15
 
 
